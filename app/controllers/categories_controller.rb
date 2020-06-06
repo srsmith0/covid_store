@@ -1,16 +1,17 @@
 class CategoriesController < ApplicationController
-  before_action :set_category, only: [:new, :create, :show, :destroy, :edit, :update]
+  before_action :set_category, only: [:show, :destroy, :edit, :update]
   
   def index
     @categories = Category.all
   end
 
   def new
-    @category.new = Category.create(category_params)
+    @category = Category.new
+    render partial: "form"
   end
 
   def create
-    @category.new = Category.create(category_params)
+    @category = Category.create(category_params)
     if @category.save
       redirect_to categories_path
     else
@@ -24,7 +25,7 @@ end
   end
 
   def edit
-    
+    render partial: "form"
     
   end
 

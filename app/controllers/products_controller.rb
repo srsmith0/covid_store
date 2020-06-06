@@ -6,14 +6,15 @@ class ProductsController < ApplicationController
   end
 
   def new
-    @product = Product.new
+    @product = @category.products.new(product_params)
+    render partial: "form"
   end
 
   def show
   end
 
   def create
-    @product = current_user.products.new(product_params)
+    @product = @category.products.new(product_params)
     if @product.save
       redirect_to products_path
     else
@@ -22,6 +23,7 @@ class ProductsController < ApplicationController
   end
 
   def edit
+    render partial: "form"
   end
 
   def update
