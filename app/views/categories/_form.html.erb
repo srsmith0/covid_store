@@ -1,0 +1,13 @@
+<h1> <%= @category.id ? "Edit Category" : "Create New Category" %> </h1>
+
+<%= form_for [@category] do |form| %>
+
+<%= form.label :name %>
+<%= form.text_field :name %>
+
+<%= form.label :description %>
+<%= form.text_field :description %>
+
+<%= form.submit %>
+
+<% end %>
