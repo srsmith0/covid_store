@@ -19,6 +19,15 @@ class CategoriesController < ApplicationController
   end
 end
 
+def update
+    if @category.update(category_params)
+      redirect_to category_path(@category.id)
+    else
+      render partial: "form"
+  end
+end
+
+
 
   def show
     @products = Product.all.select { |x| x.category_id == @category.id }
