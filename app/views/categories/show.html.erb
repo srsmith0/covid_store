@@ -7,7 +7,7 @@
   <div class="category">
   <% @products.each do |pro| %>
   <div class= "item">
-  <%= "Name: #{pro.name}" %>
+  <%= link_to "Name: #{pro.name}", product_path(pro.id)%>
   <br />
   <%= "Price: $ #{pro.price}" %>
   <br />
@@ -19,3 +19,4 @@
 <br />
 <%= link_to "Go Back", categories_path %>
 <%= link_to "Create New Product", new_product_path %>
+<%= link_to "Edit Category", edit_category_path(@category.id)%>

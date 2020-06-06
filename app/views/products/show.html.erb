@@ -1,2 +1,6 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<h1><%= @product.name%></h1>
+<h3><%= "$ #{@product.price}"%></h3>
+
+<br />
+<%= link_to "Edit Item", edit_product_path(@product.id) %>
+<%= link_to "Go Back", category_path(@product.category_id) %>
