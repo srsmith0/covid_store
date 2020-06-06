@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action only: [:new, :create, :show, :destroy, :edit, :update]
+  before_action :set_category, only: [:new, :create, :show, :destroy, :edit, :update]
   
   def index
     @categories = Category.all
@@ -20,8 +20,7 @@ end
 
 
   def show
-    @categories = Category.all
-    @products = Product.find(set_product)
+    @products = Product.all.select { |x| x.category_id == @category.id }
   end
 
   def edit
@@ -41,7 +40,7 @@ end
   end
 
   def set_category
-    Category.find(params[:id])
+    @category = Category.find(params[:id])
   end
 
   def set_product
