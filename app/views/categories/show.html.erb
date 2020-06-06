@@ -1,13 +1,19 @@
+<div class="header">
+<h1><%= @category.name %></h1>
+<h2><%= @category.description %></h2>
+</div>
 
-<h3><%= @category.name %></h3>
 
-
-<div>
+  <div class="category">
   <% @products.each do |pro| %>
+  <div class= "item">
   <%= "Name: #{pro.name}" %>
   <br />
   <%= "Price: $ #{pro.price}" %>
   <br />
+  <div id="add_to_cart"><button> Add to Cart</button></div>
+  </div>
   <% end %>
-</div>
+  </div>
+
 <%= link_to "Go Back", categories_path %>
