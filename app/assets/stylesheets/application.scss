@@ -31,3 +31,56 @@
   margin: 2px;
 }
 
+// -------------------------------------navbar section----------------------------------
+.shiftRight{
+  float: right;
+}
+
+
+.store {
+  text-align:center;
+  color: grey;
+  background-color: #331e6e;
+  padding-top: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav li {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family:'Bellota', cursive;
+  list-style-type: none;
+}
+.topnav li:hover {
+  background-color: #ddd;
+  color: black;
+  
+}
+
+
+#store_name {
+  font-family: 'Mansalva', cursive;
+  font-size: 3em;
+}
+
+.store {
+  text-align:center;
+  color: grey;
+  background-color: #331e6e;
+  margin: 0px;
+  padding-top: 10px;
+  
+}
+
+#tagline {
+  font-family: 'Mansalva', cursive;
+  font-size: 1.5em;
+}
